@@ -1,0 +1,17 @@
+syntax="proto3";
+
+option go_package = "./binaryTree";
+
+package api;
+
+service BinaryTree {
+  rpc GenerateRequest(GenRequest) returns (GenResponse) {}
+}
+
+message GenRequest {
+  string request = 1;
+}
+
+message GenResponse {
+  string result = 1;
+}
